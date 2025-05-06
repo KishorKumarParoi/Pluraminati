@@ -9,6 +9,7 @@ module.exports = withUt({
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
     "./node_modules/@tremor/**/*.{js,ts,jsx,tsx}", // Tremor module
+    "./node_modules/@uploadthing/react/dist/**/*.{js,ts,jsx,tsx}", // <-- add this line
   ],
   theme: {
     container: {
