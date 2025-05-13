@@ -1,6 +1,8 @@
+import { UserButton } from "@clerk/nextjs";
 import { User } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
+import { ModeToggle } from "../../global/mode-toggle";
 
 interface Props {
   user?: null | User;
@@ -25,6 +27,16 @@ const Navigation = ({ user }: Props) => {
           <Link href={"#"}>Documentation</Link>
         </ul>
       </nav>
+      <aside className="flex gap-2 items-center">
+        <ModeToggle />
+        <UserButton />
+        <Link
+          href={"/agency"}
+          className="bg-blue-600 text-white p-2 px-4 rounded-md hover:bg-blue-700 "
+        >
+          Login
+        </Link>
+      </aside>
     </div>
   );
 };
