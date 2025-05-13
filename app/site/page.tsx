@@ -61,13 +61,13 @@ export default async function Home() {
             <Card
               key={card.title}
               className={clsx("w-[300px flex flex-col justify-between", {
-                "border-2 border-blue-500": card.title === "Unlimited Saas",
+                "border-2 border-blue-500": card.title === "Unlimited Sass",
               })}
             >
               <CardHeader>
                 <CardTitle
                   className={clsx("", {
-                    "text-muted-foreground": card.title !== "Unlimited Saas",
+                    "text-muted-foreground": card.title !== "Unlimited Sass",
                   })}
                 >
                   {card.title}
@@ -90,8 +90,8 @@ export default async function Home() {
                 <Link
                   href={`/agency?plan=${card.priceId}`}
                   className={clsx(
-                    "w-full text-center bg-primary p-2 rounded-md ",
-                    { "!bg-muted-foreground": card.title !== "Unlimited Saas" }
+                    "w-full text-center bg-blue-500 p-2 rounded-md ",
+                    { "!bg-muted-foreground": card.title !== "Unlimited Sass" }
                   )}
                 >
                   Get Started
