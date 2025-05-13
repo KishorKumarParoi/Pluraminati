@@ -9,12 +9,12 @@ export const pricingCards = [
     priceId: "",
   },
   {
-    title: "Unlimited SASS",
+    title: "Unlimited Sass",
     description: "The ultimate agency kit",
     price: "$199",
     duration: "month",
     highlight: "Key features",
-    features: ["Rebilling", "24/7 support team"],
+    features: ["Rebilling", "24/7 support team", "Networking"],
     priceId: "price_10sgsjkgsglgssglj",
   },
   {
@@ -23,7 +23,11 @@ export const pricingCards = [
     price: "$49",
     duration: "month",
     highlight: "Everything in Starter, plus",
-    features: ["Unlimited sub accounts", "Unlimited team members"],
+    features: [
+      "Unlimited sub accounts",
+      "Unlimited team members",
+      "Unlimited Discounts",
+    ],
     priceId: "price_100sfsfskfsflsfks",
   },
 ];

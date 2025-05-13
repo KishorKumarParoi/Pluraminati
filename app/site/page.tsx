@@ -55,12 +55,13 @@ export default async function Home() {
           {"you're"} not <br />
           ready to commit you can get started for free
         </p>
+
         <div className="flex items-center justify-center gap-4 flex-wrap mt-6">
           {pricingCards.map((card) => (
             <Card
               key={card.title}
               className={clsx("w-[300px flex flex-col justify-between", {
-                "border-2 border-primary": card.title === "Unlimited Saas",
+                "border-2 border-blue-500": card.title === "Unlimited Saas",
               })}
             >
               <CardHeader>
@@ -77,7 +78,7 @@ export default async function Home() {
                 <span className="text-4xl font-bold ">{card.price}</span>
                 <span className=""></span>
               </CardContent>
-              <CardFooter className="flex flex-col items-start gap-4 ">
+              <CardFooter className="flex flex-col justify-center items-center gap-4 ">
                 <div>
                   {card.features.map((feature: any) => (
                     <div key={feature} className="flex gap-2 items-center ">
@@ -86,7 +87,15 @@ export default async function Home() {
                     </div>
                   ))}
                 </div>
-                <Link href={`/agency?plan=${card.priceId}`}></Link>
+                <Link
+                  href={`/agency?plan=${card.priceId}`}
+                  className={clsx(
+                    "w-full text-center bg-primary p-2 rounded-md ",
+                    { "!bg-muted-foreground": card.title !== "Unlimited Saas" }
+                  )}
+                >
+                  Get Started
+                </Link>
               </CardFooter>
             </Card>
           ))}
